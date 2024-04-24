@@ -1,5 +1,5 @@
 """
-# Command line interface
+# Command Line Interface Log
 
 Developed by [DeltaBotics](https://github.com/DeltaBotics)
 See LICENSE for more details.

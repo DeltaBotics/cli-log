@@ -3,13 +3,9 @@
 This python module is used to make your command line / terminal more fancy when printing / logging certain events.
 
 ## Quick install
-clone the repository into your projects root folder
+
 ```bash
-git clone https://github.com/DeltaBotics/cli.git
-```
-pip install dependencies
-```bash
-pip install -r requirements.txt
+pip install cli-log
 ```
 
 ## Examples
