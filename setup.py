@@ -14,7 +14,7 @@ with open("README.md", encoding="utf-8") as f:
 setup(
     name="cli-log",
     packages=find_packages(),
-    version="0.1.1",
+    version="0.2",
     license="MIT",
     description="Command line interface logging.",
     long_description=readme,
