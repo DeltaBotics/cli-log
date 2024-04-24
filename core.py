@@ -1,5 +1,5 @@
 import colorama
-from utils import format_time
+from .utils import format_time
 
 colorama.init(autoreset=True)
 
