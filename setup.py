@@ -13,8 +13,8 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="cli-log",
-    packages=["cli-log"],
-    version="0.1",
+    packages=["cli_log"],
+    version="0.1.1",
     license="MIT",
     description="Command line interface logging.",
     long_description=readme,
