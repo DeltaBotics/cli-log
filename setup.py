@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 classifiers = [
     "Intended Audience :: Developers",
@@ -13,8 +13,8 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="cli-log",
-    packages=["cli"],
-    version="0.1.4",
+    packages=find_packages(),
+    version="0.1.6",
     license="MIT",
     description="Command line interface logging.",
     long_description=readme,
