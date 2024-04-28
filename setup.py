@@ -14,7 +14,7 @@ with open("README.md", encoding="utf-8") as f:
 setup(
     name="cli-log",
     packages=find_packages(),
-    version="0.2",
+    version="1.0",
     license="MIT",
     description="Command line interface logging.",
     long_description=readme,
@@ -22,7 +22,7 @@ setup(
     author="DeltaBotics",
     url="https://github.com/DeltaBotics/cli-log",
     keywords=["logging"],
-    install_requires=["colorama"],
+    install_requires=["colorama==0.4.6"],
     classifiers=classifiers,
     project_urls={"Source": "https://github.com/DeltaBotics/cli-log"},
 )
