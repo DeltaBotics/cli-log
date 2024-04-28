@@ -5,7 +5,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 """
-# Testing Environement
+# Testing Environment
 
 Include test code below.
 """
@@ -22,3 +22,7 @@ cli.error("Error between error raising.")
 cli.init(reset=True) # Doesn't do anything because we didnt set format before
 
 cli.debug("Should not get executed.")
+
+cli.init(log_format="[{severity} ! {time}]{prefix} {message}")
+
+cli.info(message="Yo", color=cli.BLACK)
