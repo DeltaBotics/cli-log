@@ -13,7 +13,7 @@ with open("README.md", encoding="utf-8") as f:
 
 setup(
     name="cli-log",
-    packages=find_packages(),
+    packages=find_packages(exclude=["testing"]),
     version="1.0",
     license="MIT",
     description="Command line interface logging.",
