@@ -22,6 +22,6 @@ def init(log_format = None, reset: bool = False) -> None:
             del os.environ["CLI-LOG_FORMAT"]
     except KeyError as e:
         if 'CLI-LOG_FORMAT' in str(e):
-            pass # This error can be safely ignored.
+            pass # This error can be ignored safely.
     except Exception:
         print(traceback.format_exc())
