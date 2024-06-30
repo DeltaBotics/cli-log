@@ -2,6 +2,8 @@
 
 This python module is used to make your command line / terminal more fancy when printing / logging certain events.
 
+For a more detailed documentation checkout the docs: https://deltabotics.github.io/cli-log
+
 ## Quick install
 
 ```bash
