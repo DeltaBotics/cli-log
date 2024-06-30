@@ -95,16 +95,15 @@ The format of the log messages. Defaults to `'[{time} / {severity}]{prefix} {mes
 Whether or not to reset the `log_format` to the default. Defaults to `False`.
 
 ## Colors
-**BLUE** is the default color for [cli.info()](#cliinfo), set it using `cli.BLUE`.
-**GREEN** is the default color for [cli.debug()](#clidebug), set it using `cli.GREEN`.
-**YELLOW** is the default color for [cli.warn()](#cliwarn), set it using `cli.YELLOW`.
-**RED** is the default color for [cli.error()](#clierror), set it using `cli.RED`.
-**WHITE** is the default color for [cli.add()](#cliadd), set it using `cli.WHITE`.
-**MAGENTA**, set it using `cli.MAGENTA`.
-**CYAN**, set it using `cli.CYAN`.
-**BLACK**, set it using `cli.BLACK`.
+**BLUE** is the default color for [cli.info()](#cliinfo), set it using `cli.BLUE`.<br /> 
+**GREEN** is the default color for [cli.debug()](#clidebug), set it using `cli.GREEN`.<br /> 
+**YELLOW** is the default color for [cli.warn()](#cliwarn), set it using `cli.YELLOW`.<br /> 
+**RED** is the default color for [cli.error()](#clierror), set it using `cli.RED`.<br /> 
+**WHITE** is the default color for [cli.add()](#cliadd), set it using `cli.WHITE`.<br /> 
+**MAGENTA**, set it using `cli.MAGENTA`.<br /> 
+**CYAN**, set it using `cli.CYAN`.<br />
+**BLACK**, set it using `cli.BLACK`.<br /> 
 
-> [!TIP]
 > The colors can also be set using [colorama](https://github.com/tartley/colorama?tab=readme-ov-file#colored-output).
 > Or you can use your own [ANSI](https://gist.github.com/rene-d/9e584a7dd2935d0f461904b9f2950007#file-colors-py) sequences.
 
