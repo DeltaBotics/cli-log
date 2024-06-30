@@ -20,7 +20,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     author="DeltaBotics",
-    url="https://github.com/DeltaBotics/cli-log",
+    url="https://deltabotics.github.io/cli-log",
     keywords=["logging"],
     install_requires=["colorama==0.4.6"],
     classifiers=classifiers,
