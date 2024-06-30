@@ -24,3 +24,5 @@ buttons:
       tar_title: Title
       tar_hide: true
       github_hide: false # hides "View on Github"
+
+# Tried using different theme, didnt work, so if someones wondering why this is so large
