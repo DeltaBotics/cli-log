@@ -25,4 +25,4 @@ cli.debug("Should not get executed.")
 
 cli.init(log_format="[{severity} ! {time}]{prefix} {message}")
 
-cli.info(message="Yo", color=cli.BLACK)
+cli.info(message="Hello", color=cli.BLACK)
