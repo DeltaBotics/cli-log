@@ -5,4 +5,5 @@ Developed by [DeltaBotics](https://github.com/DeltaBotics)
 See LICENSE for more details.
 """
 
-from .core import info, debug, warn, error
+from .core import *
+from .initialise import init
