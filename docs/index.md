@@ -83,7 +83,7 @@ An optional prefix for the log message. Defaults to `''`. <br />
 `color` : `str` <br />
 An optional color for the log message. Defaults to `WHITE`. <br />
 
-### [cli.init()](https://github.com/DeltaBotics/cli-log/blob/bc0dc4f66d6df40b92f714fd92b5db1f4d20801a/cli/__init__.py#L3)
+### [cli.init()](https://github.com/DeltaBotics/cli-log/blob/bc0dc4f66d6df40b92f714fd92b5db1f4d20801a/cli/initialise.py#L3-L27)
 
 Usage to set log_format : ``cli.init(prefix='[{time} / {severity}]{prefix} {message}')`` <br />
 Usage to reset log_format : ``cli.init(reset=True)`` <br />
