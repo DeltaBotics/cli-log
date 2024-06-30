@@ -4,7 +4,7 @@ github:
   pypi: https://pypi.org/project/cli-log/
 show_downloads: true
 google_analytics:
-theme: tuur29/pages-themes-cayman
+remote_theme: pages-themes/cayman@v0.2.0
 google_analytics_anonymize: false
 darkmode: true
 hide_first_title: true # Useful if README.md is used on both github and pages
