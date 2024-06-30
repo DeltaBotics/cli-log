@@ -1,4 +1,4 @@
-# Command Line Interface Docs
+# Command Line Interface Log Docs
 
 This python module is used to make your command line / terminal more fancy when printing / logging certain events.
 
