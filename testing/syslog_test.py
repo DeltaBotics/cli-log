@@ -10,19 +10,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 Include test code below.
 """
 
-from cli import logging
+import cli
 
 def test_logging():
     try:
         # Configure logging to a file
-        log = logging.init(level=logging.DEBUG, mode='a', handler_type='file', log_file_path='best.log')
+        cli.logging.LoggerManager.init(level=cli.logging.DEBUG, mode='w', handler_type='file', log_file_path='testing/test.log')
 
-        # Log some messages
-        log.debug('Debug message')
-        log.info('Info message')
-        log.warning('Warning message')
-        log.error('Error message')
-        log.critical('Critical message')
+        cli.info('CLI started\nYo')
+        cli.warn('Sup')
 
     except Exception as e:
         print(f"Exception occurred: {str(e)}")

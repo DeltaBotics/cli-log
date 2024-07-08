@@ -1,5 +1,7 @@
 import os
 from .utils import *
+from . import logging
+from .logging import LoggerManager
 
 LOG_FORMAT = "[{time} / {severity}]{prefix} {message}"
 
@@ -99,6 +101,10 @@ def critical(message: str, prefix: str = '', color: str = RED) -> None:
     log("CRITICAL", message, prefix, color)
 
 def log(severity: str, message: str, prefix: str, color: str = '') -> None:
+    try:
+        logger = LoggerManager.get_logger()  # Get the configured logger
+    except Exception as e:
+        logger = None   
 
     log_format = os.getenv("CLI-LOG_FORMAT", LOG_FORMAT)
     time = format_time()
@@ -107,7 +113,21 @@ def log(severity: str, message: str, prefix: str, color: str = '') -> None:
     msg_console = '\n'.join(lines) # Join the lines back together
     log_to_console(msg_console, color)
 
+    for line in message.split('\n'):
+        if line.strip():  # Skip empty lines
+            if logger:
+                if severity == "INFO":
+                    logger.info(line)
+                elif severity == "DEBUG":
+                    logger.debug(line)
+                elif severity == "WARN":
+                    logger.warning(line)
+                elif severity == "ERROR":
+                    logger.error(line)
+                elif severity == "CRITICAL":
+                    logger.critical(line)
+                else:
+                    logger.log(logging.INFO, line)
+
 def log_to_console(message: str, color: str = ''):
     print(color + message)
-
-    colorama.Fore.GREEN + "Y"
