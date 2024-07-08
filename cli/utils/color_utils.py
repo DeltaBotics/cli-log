@@ -2,7 +2,7 @@ import colorama
 
 colorama.init(autoreset=True)
 
-RED = colorama.Fore.RED # ERROR
+RED = colorama.Fore.RED # ERROR # CRITICAL
 GREEN = colorama.Fore.GREEN # DEBUG
 YELLOW = colorama.Fore.YELLOW # WARN
 BLUE = colorama.Fore.BLUE # INFO

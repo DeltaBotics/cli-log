@@ -82,6 +82,22 @@ def error(message: str, prefix: str = '', color: str = RED) -> None:
 
     log("ERROR", message, prefix, color)
 
+def critical(message: str, prefix: str = '', color: str = RED) -> None:
+    """
+    Logs a critical message.
+
+    Parameters
+    -----------
+    `message` : :class:`str` 
+        The message to log.
+    `prefix` : :class:`str`, optional
+        An optional prefix for the log message. Defaults to `''`.
+    `color` : :class:`str`, optional
+        An optional color for the log message. Defaults to `RED`.
+    """
+
+    log("CRITICAL", message, prefix, color)
+
 def log(severity: str, message: str, prefix: str, color: str = '') -> None:
 
     log_format = os.getenv("CLI-LOG_FORMAT", LOG_FORMAT)
