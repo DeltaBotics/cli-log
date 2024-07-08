@@ -33,7 +33,7 @@ Usage : ``cli.info(message, prefix='', color=cli.Blue')``
 The message to log. <br />
 `prefix` : `str`, (optional) <br />
 An optional prefix for the log message. Defaults to `''`. <br />
-`color` : `str`, optional <br />
+`color` : `str`, (optional) <br />
 An optional color for the log message. Defaults to `BLUE`. <br />
 
 ## [cli.debug()](https://github.com/DeltaBotics/cli-log/blob/bc0dc4f66d6df40b92f714fd92b5db1f4d20801a/cli/core.py#L39-L52)
