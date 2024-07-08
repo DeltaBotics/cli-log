@@ -1,7 +1,7 @@
 import os
 from .utils import *
 from . import logging
-from .logging import LoggerManager
+from .logging import logmanager
 
 LOG_FORMAT = "[{time} / {severity}]{prefix} {message}"
 
@@ -102,7 +102,7 @@ def critical(message: str, prefix: str = '', color: str = RED) -> None:
 
 def log(severity: str, message: str, prefix: str, color: str = '') -> None:
     try:
-        logger = LoggerManager.get_logger()  # Get the configured logger
+        logger = logmanager.LoggerManager.get_logger()  # Get the configured logger
     except Exception as e:
         logger = None   
 

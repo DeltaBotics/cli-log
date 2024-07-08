@@ -1,28 +1,20 @@
-import logging as real_logging # Real logging package
-from . import levels as logging # Custom logging package
-from .FileHandler import OverwriteFileHandler
+from . import levels as logging
+from .logmanager import LoggerManager
 from logging.handlers import SysLogHandler
-from logging import StreamHandler
 
-logger = None
-
-class LoggerManager:
-
-    @classmethod
-    def init(
-            cls,
-            level = logging.DEBUG,
-            handler_type = 'syslog',
-            facility = SysLogHandler.LOG_DAEMON,
-            address = '/dev/log',
-            log_file_path = None,
-            mode = 'a',
-            max_bytes = 10485760,
-            backup_count = 5,
-            stream = None,
-            fmt="%(asctime)s - %(filename)s:%(funcName)s:%(lineno)d %(levelname)s - '%(message)s'",
-            datefmt="%Y-%m-%d %H:%M:%S"
-            ) -> None:
+def init(
+        level = logging.DEBUG,
+        handler_type = 'syslog',
+        facility = SysLogHandler.LOG_DAEMON,
+        address = '/dev/log',
+        log_file_path = None,
+        mode = 'a',
+        max_bytes = 10485760,
+        backup_count = 5,
+        stream = None,
+        fmt = "%(asctime)s - %(filename)s:%(funcName)s:%(lineno)d %(levelname)s - '%(message)s'",
+        datefmt = "%Y-%m-%d %H:%M:%S"
+        ) -> None:
 
         """
         Initialises the logging system with the specified options.
@@ -53,32 +45,15 @@ class LoggerManager:
             Date/time format for log messages. Defaults to `"%Y-%m-%d %H:%M:%S"`.
         """
 
-        cls.logger = real_logging.getLogger(__name__)
-        cls.logger.setLevel(level)
-
-        if handler_type == 'syslog':
-            if not hasattr(real_logging, 'SysLogHandler'):
-                raise ValueError("Syslog logging is not supported on this platform.")
-            handler = SysLogHandler(facility=facility, address=address)
-        elif handler_type == 'file':
-            if log_file_path is None:
-                raise ValueError("log_file_path must be specified for file handler")
-            elif mode is not None and mode not in ('a', 'w'):
-                raise ValueError("mode must be one of 'a' (append), 'w' (write)")
-            handler = OverwriteFileHandler(log_file_path, mode=mode, maxBytes=max_bytes, backupCount=backup_count)
-        elif handler_type == 'stream':
-            handler = StreamHandler(stream=stream)
-        else:
-            raise ValueError("Invalid handler_type specified. Choose 'syslog', 'file', or 'stream'.")
-
-        formatter = real_logging.Formatter(fmt=fmt, datefmt=datefmt)
-        handler.setFormatter(formatter)
-        cls.logger.addHandler(handler)
-
-        return cls.logger
-    
-    @classmethod
-    def get_logger(cls):
-        if cls.logger is None:
-            raise RuntimeError("Logger not configured. Please call 'configure_logging' first.")
-        return cls.logger
+        LoggerManager.init(
+                level=level,
+                handler_type=handler_type,
+                facility=facility,
+                address=address,
+                log_file_path=log_file_path,
+                mode=mode, max_bytes=max_bytes,
+                backup_count=backup_count,
+                stream=stream,
+                fmt=fmt,
+                datefmt=datefmt
+                )

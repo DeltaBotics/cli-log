@@ -15,10 +15,11 @@ import cli
 def test_logging():
     try:
         # Configure logging to a file
-        cli.logging.LoggerManager.init(level=cli.logging.DEBUG, mode='w', handler_type='file', log_file_path='testing/test.log')
+        cli.logging.init(level=cli.logging.DEBUG, mode='w', handler_type='file', log_file_path='testing/test.log')
 
         cli.info('CLI started\nYo')
         cli.warn('Sup')
+        cli.debug('I am a debug')
 
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
