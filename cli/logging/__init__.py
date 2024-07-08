@@ -8,4 +8,4 @@ from .levels import DEBUG, INFO, WARNING, ERROR, CRITICAL
 from .initialise import init
 from .FileHandler import OverwriteFileHandler
 
-__all__ = ["logmanager", "OverwriteFileHandler"]
+__all__ = ["init", "OverwriteFileHandler"]

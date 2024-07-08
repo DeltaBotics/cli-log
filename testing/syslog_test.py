@@ -20,9 +20,12 @@ def test_logging():
         cli.info('CLI started\nYo')
         cli.warn('Sup')
         cli.debug('I am a debug')
+        cli.critical('Critical')
 
     except Exception as e:
         print(f"Exception occurred: {str(e)}")
 
 if __name__ == "__main__":
     test_logging()
+
+    cli.help()
