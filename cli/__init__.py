@@ -7,3 +7,4 @@ See LICENSE for more details.
 
 from .core import *
 from .initialise import init
+from .logging import *
