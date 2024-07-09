@@ -1,3 +1,4 @@
+import os
 from . import levels as logging
 from .logmanager import LoggerManager
 from logging.handlers import SysLogHandler
@@ -6,7 +7,7 @@ def init(
         level = logging.DEBUG,
         handler_type = 'syslog',
         facility = SysLogHandler.LOG_DAEMON,
-        address = '/dev/log',
+        address = os.path.join('dev', 'log'),
         log_file_path = None,
         mode = 'a',
         max_bytes = 10485760,
@@ -26,7 +27,7 @@ def init(
         `handler_type` : :class:`str`, optional	
             Type of logging handler (`'syslog'`, `'file'`, `'stream'`). Defaults to `'syslog'`.
         `facility` : :class:`int`, optional
-            Syslog `facility` if `handler_type` is 'syslog'. Defaults to `SysLogHandler.LOG_DAEMON`.
+            Syslog `facility` if `handler_type` is `'syslog'`. Defaults to `SysLogHandler.LOG_DAEMON`.
         `address` : :class:`str`, optional
             Address for syslog logging if `handler_type` is 'syslog'. Defaults to `'/dev/log'`.
         `log_file_path` : :class:`str`, optional
