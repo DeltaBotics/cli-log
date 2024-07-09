@@ -1,6 +1,8 @@
 This is the documentation for the built-in-logging functionality. <br />
 Its a subclass of the standard logging library included in python. <br />
 
+Click [here](/cli-log/) to get back to the main page.
+
 # Table of Contents
 - [Table of Contents](#table-of-contents)
 - [logging.init()](#logginginit)
