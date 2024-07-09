@@ -1,6 +1,6 @@
 This python module is used to make your command line terminal more fancy when printing / logging certain events. <br />
 
-Visit the [logging](/docs/logging.html) documentation for more information on how to use the  logging functionality of this module. <br />
+Visit the [logging](/cli-log/logging.html) documentation for more information on how to use the  logging functionality of this module. <br />
 
 # Table of contents
 - [Table of contents](#table-of-contents)
