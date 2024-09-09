@@ -1,5 +1,5 @@
 title: cli-log
-description: cli-log is pypi package used create log messages in a command line interface.
+description: cli-log is a pypi package used create log messages in a command line interface.
 github:
   pypi: https://pypi.org/project/cli-log/
 show_downloads: true
